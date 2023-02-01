@@ -10,4 +10,6 @@
 
 4. By using wizard select one of class (e.g. `Customer`) and create a `DbContext` class for EF. Use shared layout as a template and generate views for CRUD operations.
 
-5. Resolve all issues and add links in the navigation heder to 'add new customer' and 'list all customers' option.
+5. Use EF migrations if needed to apply database structure.
+
+6. Resolve all issues and add links in the navigation heder to 'add new customer' and 'list all customers' option.
