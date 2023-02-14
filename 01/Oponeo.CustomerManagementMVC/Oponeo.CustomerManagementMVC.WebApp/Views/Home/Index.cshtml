@@ -1,0 +1,24 @@
+﻿@model Oponeo.CustomerManagementMVC.WebApp.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Products</div>
+            <div class="card-body">
+                <partial name="~/Views/Products/GetProducts.cshtml" model="Model.Products" />
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Customer</div>
+            <div class="card-body">
+                @Model.Customer.FirstName @Model.Customer.LastName
+            </div>
+        </div>
+    </div>
+</div>
