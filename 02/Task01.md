@@ -1,4 +1,4 @@
-## Task 4
+## Task 1
 
 ### Creating web application with onion architecture
 
@@ -8,6 +8,6 @@
 
 3. In the `Application` project add services to make CRUD operations with using repositories.
 
-4. In the `Persistence` layer make implementation of interfaces.
+4. In the `Persistence` layer make implementation of repositories interfaces.
 
 5. Change controllers to using service from `Application` layer.
