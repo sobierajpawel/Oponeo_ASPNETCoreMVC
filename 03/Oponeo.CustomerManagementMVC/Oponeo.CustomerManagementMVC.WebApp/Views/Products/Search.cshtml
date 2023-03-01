@@ -1,0 +1,48 @@
+﻿@using Oponeo.CustomerManagementMVC.WebApp.Models
+@model SearchViewModel
+
+<form asp-action="Search" asp-controller="Products"
+      data-ajax="true" data-ajax-method="POST"
+      data-ajax-begin="onBegin" data-ajax-success="onSuccess"
+      data-ajax-failure="onFailure" data-ajax-complete="onComplete"
+        >
+    <div class="form-group">
+        <label asp-for="SearchString" class="control-label"></label>
+        <input asp-for="SearchString" class="form-control" />
+      </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+</form>
+
+<br/>
+<br/>
+
+<div id="progress" style="display:none">
+    <label>Wyszukiwanie...</label>
+</div>
+
+<div id="result">
+    <partial name="~/Views/Products/GetProducts.cshtml" model="Model.Products" />
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        function onBegin(){
+            $('#progress').show();
+        }
+        
+        function onSuccess(data){
+            $("#result").html(data);
+        }
+
+        function onFailure(data){
+            alert('something goes wrong');
+        }
+
+        function onComplete(){
+            $('#progress').hide();
+        }
+    </script>
+}

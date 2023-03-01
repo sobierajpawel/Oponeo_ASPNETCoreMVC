@@ -1,0 +1,32 @@
+﻿@*@model IEnumerable<Oponeo.CustomerManagementMVC.WebApp.Models.Customer>
+
+
+<h4>Klienci</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nazwa klienta</th>
+            <th>Link html</th>
+            <th>Link html helper</th>
+            <th>Link tag helper</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.FirstName @customer.LastName</td>
+                <td>
+                    <a href="/customer/details">Detale</a>
+                </td>
+                <td>
+                    @Html.ActionLink("Detale","Details")
+                </td>
+                <td>
+                    <a asp-action="Details">Detale</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
