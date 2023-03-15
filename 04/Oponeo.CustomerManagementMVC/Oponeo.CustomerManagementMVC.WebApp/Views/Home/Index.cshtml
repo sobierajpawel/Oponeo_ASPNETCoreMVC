@@ -1,0 +1,43 @@
+﻿@model Oponeo.CustomerManagementMVC.WebApp.Models.HomeViewModel
+@inject Oponeo.CustomerManagementMVC.Services.Statistics.ProductStatisticService productStatisticsService
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Products</div>
+            <div class="card-body">
+                <partial name="~/Views/Products/GetProducts.cshtml" model="Model.Products" />
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Customer</div>
+            <div class="card-body">
+                @Model.Customer.FirstName @Model.Customer.LastName
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Products average price</div>
+            <div class="card-body">
+                <h4>@productStatisticsService.GetAveragePrice()</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-title">Products total price</div>
+            <div class="card-body">
+                <h4>@productStatisticsService.GetTotalProducts()</h4>
+            </div>
+        </div>
+    </div>
+</div>
