@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "Oponeo.CustomerManagement.GrpcService";
+
+package products;
+
+service ProductGrpcRequestResponse{
+	rpc GetAll(EmptyRequest) returns(ProductsResponse);
+	rpc GetById(IdRequest) returns(ProductResponse);
+	rpc Add(ProductRequest) returns(ProductResponse);
+	rpc Update(ProductRequest) returns(ProductResponse);
+	rpc Remove(IdRequest) returns(EmptyResponse); 
+}
+
+message EmptyRequest{}
+
+message EmptyResponse{}
+
+message IdRequest{
+	int32 Id = 1;
+}
+
+message ProductResponse{
+	int32 Id = 1;
+	string Name = 2;
+	string Description = 3;
+	double Price = 4;
+	int32 ProductTypeId = 5;
+}
+
+message ProductRequest{
+	int32 Id = 1;
+	string Name = 2;
+	string Description = 3;
+	double Price = 4;
+	int32 ProductTypeId = 5;
+}
+
+message ProductsResponse{
+	repeated ProductResponse items = 1;
+}

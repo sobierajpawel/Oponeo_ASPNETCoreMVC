@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Oponeo.CustomerManagementMVC.Domain\Oponeo.CustomerManagementMVC.Domain.csproj" />
+    <ProjectReference Include="..\Oponeo.CustomerManagementMVC.Persistence\Oponeo.CustomerManagementMVC.Persistence.csproj" />
+    <ProjectReference Include="..\Oponeo.CustomerManagementMVC.Services\Oponeo.CustomerManagementMVC.Services.csproj" />
+  </ItemGroup>
+
+</Project>

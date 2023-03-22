@@ -1,0 +1,79 @@
+﻿@using Oponeo.CustomerManagementMVC.WebApp.Models
+@model SearchViewModel
+
+<form asp-action="Search" asp-controller="Products"
+      data-ajax="true" data-ajax-method="POST"
+      data-ajax-begin="onBegin" data-ajax-success="onSuccess"
+      data-ajax-failure="onFailure" data-ajax-complete="onComplete"
+        >
+    <div class="form-group">
+        <label asp-for="SearchString" class="control-label"></label>
+        <input asp-for="SearchString" class="form-control" />
+      </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+</form>
+
+<br/>
+<br/>
+
+<div id="progress" style="display:none">
+    <label>Wyszukiwanie...</label>
+</div>
+
+<div id="result">
+    <partial name="~/Views/Products/GetProductsWithPagination.cshtml" model="Model.PaginatedProductViewModel" />
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        let index = 0;
+
+        function onBegin(){
+            $('#progress').show();
+        }
+        
+        function onSuccess(data){
+            $("#result").html(data);
+            $("#current-index").html(index + 1);
+        }
+
+        function onFailure(data){
+            alert('something goes wrong');
+        }
+
+        function onComplete(){
+            $('#progress').hide();
+        }
+
+        $(document).on("click","#btn_previous", ()=>{
+            if (index > 0) {
+                index--;
+                getPagedData();
+            }
+        });
+
+        $(document).on("click","#btn_next",()=>{
+            index++;
+            getPagedData();
+        });
+
+        $(document).on("click", ".btn-iteration",(e)=>{
+            index = $(e.currentTarget).data('index');
+            getPagedData();
+        })
+
+        function getPagedData(){
+            var url = '@Url.Action("Search","Products")'; 
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: { "SearchString": $("#SearchString").val(), "PageNumber": index },
+                success: onSuccess,
+                failure: onFailure,
+            })
+        }
+    </script>
+}

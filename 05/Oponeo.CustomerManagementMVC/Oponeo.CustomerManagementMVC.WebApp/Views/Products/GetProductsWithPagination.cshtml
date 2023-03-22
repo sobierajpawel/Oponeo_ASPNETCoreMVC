@@ -1,0 +1,14 @@
+﻿@model Oponeo.CustomerManagementMVC.WebApp.Models.PaginatedProductViewModel
+
+<partial name="~/Views/Products/GetProducts.cshtml" model="Model.ProductViewModels" />
+
+<p id="current-index"></p>
+
+<div id="navigation_buttons_container">
+    <button id="btn_previous" class="btn btn-primary">Previous</button>
+    @for (int i = 0; i< Model.TotalPages;i++)
+    {
+        <button class="btn btn-secondary btn-iteration" data-index="@i">@(i+1)</button>
+    }
+    <button id="btn_next" class="btn btn-primary">Next</button>
+</div>
