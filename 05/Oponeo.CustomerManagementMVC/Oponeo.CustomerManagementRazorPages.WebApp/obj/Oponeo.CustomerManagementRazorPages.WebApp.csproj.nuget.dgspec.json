@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.WebApp\\Oponeo.CustomerManagementMVC.WebApp.csproj": {}
+    "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementRazorPages.WebApp\\Oponeo.CustomerManagementRazorPages.WebApp.csproj": {}
   },
   "projects": {
     "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.Domain\\Oponeo.CustomerManagementMVC.Domain.csproj": {
@@ -194,14 +194,14 @@
         }
       }
     },
-    "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.WebApp\\Oponeo.CustomerManagementMVC.WebApp.csproj": {
+    "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementRazorPages.WebApp\\Oponeo.CustomerManagementRazorPages.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.WebApp\\Oponeo.CustomerManagementMVC.WebApp.csproj",
-        "projectName": "Oponeo.CustomerManagementMVC.WebApp",
-        "projectPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.WebApp\\Oponeo.CustomerManagementMVC.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementRazorPages.WebApp\\Oponeo.CustomerManagementRazorPages.WebApp.csproj",
+        "projectName": "Oponeo.CustomerManagementRazorPages.WebApp",
+        "projectPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementRazorPages.WebApp\\Oponeo.CustomerManagementRazorPages.WebApp.csproj",
         "packagesPath": "C:\\Users\\pso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.WebApp\\obj\\",
+        "outputPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementRazorPages.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pso\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -219,6 +219,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.Domain\\Oponeo.CustomerManagementMVC.Domain.csproj": {
+                "projectPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.Domain\\Oponeo.CustomerManagementMVC.Domain.csproj"
+              },
               "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.Persistence\\Oponeo.CustomerManagementMVC.Persistence.csproj": {
                 "projectPath": "C:\\Users\\pso\\Documents\\GitHub\\Oponeo_ASPNETCoreMVC\\06\\Oponeo.CustomerManagementMVC\\Oponeo.CustomerManagementMVC.Persistence\\Oponeo.CustomerManagementMVC.Persistence.csproj"
               },
@@ -237,22 +240,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.13, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.11, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
