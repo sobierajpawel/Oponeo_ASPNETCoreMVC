@@ -23,7 +23,7 @@ public class AddOrdersCommand : IRequest<bool>
 ```
 
 ```cs
- public class AddOrdersCommandHandler : IRequestHandler<AddOrdersCommand, bool>
+     public class AddOrdersCommandHandler : IRequestHandler<AddOrdersCommand, bool>
     {
         public AddOrdersCommandHandler()
         {
@@ -41,7 +41,7 @@ public class AddOrdersCommand : IRequest<bool>
 7. In the controller for orders inject IMediatr and add proper method with sending a command.
 
 ```cs
- private readonly ProductService _productService;
+        private readonly ProductService _productService;
         private readonly IMediator _mediator;
         public OrderController(ProductService productService, IMediator mediator)
         {
